@@ -39,7 +39,7 @@ const LoanPlans: React.FC<LoanPlansProps> = ({ previewMode = false, onSelectPlan
         'Category-based spending controls',
         'Real-time spending alerts',
         'Cash back on educational expenses',
-        'Lower rates for Dean's List students'
+        'Lower rates for Dean\'s List students'
       ],
       popular: true,
       ideal: 'All college students'
