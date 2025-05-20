@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { IndianRupee } from "lucide-react";
 
 interface LoanPlansProps {
   previewMode?: boolean;
@@ -32,7 +30,7 @@ const LoanPlans: React.FC<LoanPlansProps> = ({ previewMode = false, onSelectPlan
       id: 'standard',
       name: 'Educational Advancement',
       description: 'Our most popular option with generous limits and GPA-based incentives.',
-      limit: '₹70,000 - ₹3,50,000',
+      limit: '₹1,00,000 - ₹5,00,000',
       apr: 'Starting at 9.99%',
       gpaDiscount: '0.5% APR reduction per 0.5 GPA above 3.0',
       features: [
@@ -49,7 +47,7 @@ const LoanPlans: React.FC<LoanPlansProps> = ({ previewMode = false, onSelectPlan
       id: 'premium',
       name: 'Future Professional',
       description: 'For upperclassmen and graduate students preparing for career success.',
-      limit: '₹2,00,000 - ₹7,00,000',
+      limit: '₹3,00,000 - ₹10,00,000',
       apr: 'Starting at 8.49%',
       gpaDiscount: '0.75% APR reduction per 0.5 GPA above 3.0',
       features: [

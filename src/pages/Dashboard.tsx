@@ -1,9 +1,9 @@
-
 import React from 'react';
 import Navbar from "@/components/Navbar";
 import CreditScoreCard from "@/components/CreditScoreCard";
 import ResponsibleSpending from "@/components/ResponsibleSpending";
 import ReferralProgram from "@/components/ReferralProgram";
+import StudentCredibilityScore from "@/components/StudentCredibilityScore";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -93,8 +93,9 @@ const Dashboard = () => {
         </div>
         
         <Tabs defaultValue="credit" className="mb-8">
-          <TabsList className="grid grid-cols-3 w-full max-w-md mx-auto mb-4">
+          <TabsList className="grid grid-cols-4 w-full max-w-lg mx-auto mb-4">
             <TabsTrigger value="credit">Credit Score</TabsTrigger>
+            <TabsTrigger value="credibility">Credibility Score</TabsTrigger>
             <TabsTrigger value="spending">Spending</TabsTrigger>
             <TabsTrigger value="referrals">Referrals</TabsTrigger>
           </TabsList>
@@ -102,6 +103,12 @@ const Dashboard = () => {
           <TabsContent value="credit">
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <CreditScoreCard />
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="credibility">
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <StudentCredibilityScore />
             </div>
           </TabsContent>
           

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from "@/components/Navbar";
@@ -34,7 +33,8 @@ const Login = () => {
       title: "Login successful",
       description: "Welcome back to Gradely!",
     });
-    navigate("/dashboard");
+    // Navigate to credit score page instead of dashboard
+    navigate("/credit-score");
   };
 
   const handleSignup = (e: React.FormEvent) => {
@@ -54,9 +54,10 @@ const Login = () => {
     // For now, simulate successful signup
     toast({
       title: "Account created",
-      description: "Welcome to Gradely! Let's complete your profile.",
+      description: "Welcome to Gradely! Let's analyze your credit profile.",
     });
-    navigate("/onboarding");
+    // Navigate to credit score page
+    navigate("/credit-score");
   };
 
   return (

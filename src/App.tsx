@@ -11,6 +11,7 @@ import HowItWorks from "./pages/HowItWorks";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import CreditScore from "./pages/CreditScore";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/credit-score" element={<CreditScore />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
