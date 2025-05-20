@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Rocket, Lightning, Calendar, Brain } from "lucide-react";
+import { Check, Rocket, Zap, Calendar, Brain } from "lucide-react";
 
 interface LinkedInPosterProps {
   onClose?: () => void;
@@ -53,7 +53,7 @@ const LinkedInPoster: React.FC<LinkedInPosterProps> = ({ onClose }) => {
                     
                     <div className="flex flex-col items-center text-center p-2">
                       <div className="w-12 h-12 rounded-full bg-peach/30 flex items-center justify-center mb-2">
-                        <Lightning className="h-6 w-6 text-peach" />
+                        <Zap className="h-6 w-6 text-peach" />
                       </div>
                       <h3 className="font-bold text-navy">Behavioral Data</h3>
                       <p className="text-sm text-gray-600">Tracks interaction patterns and consistency</p>
