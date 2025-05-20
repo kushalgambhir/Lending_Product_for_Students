@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { IndianRupee } from "lucide-react";
 
 interface LoanPlansProps {
   previewMode?: boolean;
@@ -15,7 +16,7 @@ const LoanPlans: React.FC<LoanPlansProps> = ({ previewMode = false, onSelectPlan
       id: 'starter',
       name: 'Starter Credit Builder',
       description: 'Perfect for freshmen looking to establish credit history with responsible limits.',
-      limit: '$500 - $1,500',
+      limit: '₹35,000 - ₹1,00,000',
       apr: 'Starting at 11.99%',
       gpaDiscount: '0.25% APR reduction per 0.5 GPA above 3.0',
       features: [
@@ -31,7 +32,7 @@ const LoanPlans: React.FC<LoanPlansProps> = ({ previewMode = false, onSelectPlan
       id: 'standard',
       name: 'Educational Advancement',
       description: 'Our most popular option with generous limits and GPA-based incentives.',
-      limit: '$1,000 - $5,000',
+      limit: '₹70,000 - ₹3,50,000',
       apr: 'Starting at 9.99%',
       gpaDiscount: '0.5% APR reduction per 0.5 GPA above 3.0',
       features: [
@@ -48,7 +49,7 @@ const LoanPlans: React.FC<LoanPlansProps> = ({ previewMode = false, onSelectPlan
       id: 'premium',
       name: 'Future Professional',
       description: 'For upperclassmen and graduate students preparing for career success.',
-      limit: '$3,000 - $10,000',
+      limit: '₹2,00,000 - ₹7,00,000',
       apr: 'Starting at 8.49%',
       gpaDiscount: '0.75% APR reduction per 0.5 GPA above 3.0',
       features: [
@@ -86,7 +87,9 @@ const LoanPlans: React.FC<LoanPlansProps> = ({ previewMode = false, onSelectPlan
             <div className="space-y-4">
               <div>
                 <div className="text-sm font-medium text-gray-500">Credit Limit</div>
-                <div className="text-xl font-bold">{plan.limit}</div>
+                <div className="text-xl font-bold flex items-center">
+                  {plan.limit}
+                </div>
               </div>
               <div>
                 <div className="text-sm font-medium text-gray-500">Interest Rate</div>
