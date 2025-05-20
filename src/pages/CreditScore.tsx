@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -7,9 +7,11 @@ import StudentCredibilityScore from "@/components/StudentCredibilityScore";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
+import LinkedInPoster from "@/components/LinkedInPoster";
 
 const CreditScore = () => {
   const navigate = useNavigate();
+  const [showPoster, setShowPoster] = useState(false);
   
   const handleAcceptOffer = () => {
     toast({
@@ -106,8 +108,18 @@ const CreditScore = () => {
               </div>
             </CardContent>
           </Card>
+          
+          <Button 
+            onClick={() => setShowPoster(true)}
+            variant="link" 
+            className="mt-8"
+          >
+            View LinkedIn Poster
+          </Button>
         </div>
       </div>
+      
+      {showPoster && <LinkedInPoster onClose={() => setShowPoster(false)} />}
     </div>
   );
 };
