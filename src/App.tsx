@@ -12,6 +12,8 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import CreditScore from "./pages/CreditScore";
+import MentalWellness from "./pages/MentalWellness";
+import WellnessDashboard from "./pages/WellnessDashboard";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/credit-score" element={<CreditScore />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/mental-wellness" element={<MentalWellness />} />
+          <Route path="/wellness-dashboard" element={<WellnessDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
